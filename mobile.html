@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHD Support - Mobile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background: #f8f9fa;
+            padding: 16px;
+        }
+        
+        .header {
+            background: linear-gradient(120deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+        
+        .nav {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .nav-btn {
+            background: white;
+            border: 2px solid #2c3e50;
+            color: #2c3e50;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-btn:hover {
+            background: #2c3e50;
+            color: white;
+        }
+        
+        .section {
+            background: white;
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #34495e;
+            padding-bottom: 6px;
+        }
+        
+        .section h3 {
+            color: #34495e;
+            margin: 12px 0 8px 0;
+            font-size: 1.1rem;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 12px;
+        }
+        
+        li {
+            margin-bottom: 6px;
+        }
+        
+        .quick-access {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+        
+        .quick-btn {
+            background: #e8f4f8;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            color: #2c3e50;
+            border: 1px solid #3498db;
+        }
+        
+        .emergency {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 16px;
+            border-radius: 12px;
+            margin: 16px 0;
+        }
+        
+        .emergency h3 {
+            color: #856404;
+            margin-bottom: 8px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 16px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 12px;
+            }
+            
+            .header {
+                padding: 12px;
+            }
+            
+            .header h1 {
+                font-size: 1.3rem;
+            }
+            
+            .nav {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+            
+            .nav-btn {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🧠 ADHD Support</h1>
+        <p>Mobile-friendly resources for you and your wife</p>
+    </div>
+    
+    <div class="nav">
+        <div class="nav-btn" onclick="showSection('framework')">Framework</div>
+        <div class="nav-btn" onclick="showSection('mental-load')">Mental Load</div>
+        <div class="nav-btn" onclick="showSection('strategies')">Strategies</div>
+        <div class="nav-btn" onclick="showSection('tracking')">Tracking</div>
+        <div class="nav-btn" onclick="showSection('crisis')">Crisis Help</div>
+        <div class="nav-btn" onclick="showSection('resources')">Resources</div>
+    </div>
+    
+    <div id="framework" class="section">
+        <h2>🏠 Family Support Framework</h2>
+        <h3>1. Shared Understanding</h3>
+        <ul>
+            <li>Create shared vocabulary for ADHD vs. choice</li>
+            <li>Monthly education sessions together</li>
+            <li>Document ADHD impacts on household</li>
+        </ul>
+        
+        <h3>2. Collaborative Problem-Solving</h3>
+        <ul>
+            <li>Weekly structured problem-solving meetings</li>
+            <li>Use "we" language, not blame</li>
+            <li>Test solutions for 1-2 weeks</li>
+        </ul>
+        
+        <h3>3. Mutual Support</h3>
+        <ul>
+            <li>Regular needs assessments for both partners</li>
+            <li>Balanced support exchange system</li>
+            <li>Individual self-care requirements</li>
+        </ul>
+        
+        <h3>4. Consistent Systems</h3>
+        <ul>
+            <li>ADHD-friendly visual routines</li>
+            <li>Clear roles and responsibilities</li>
+            <li>Regular system maintenance</li>
+        </ul>
+        
+        <h3>5. Celebrating Progress</h3>
+        <ul>
+            <li>Daily wins recognition</li>
+            <li>Progress celebration rituals</li>
+            <li>Focus on effort, not just outcomes</li>
+        </ul>
+    </div>
+    
+    <div id="mental-load" class="section" style="display:none;">
+        <h2>⚖️ Mental Load Sharing</h2>
+        <h3>Why ADHD Brains Struggle</h3>
+        <ul>
+            <li>Working memory differences</li>
+            <li>Self-regulation issues</li>
+            <li>Tiny distractions cause cracks</li>
+            <li>RSD makes asking for help hard</li>
+        </ul>
+        
+        <h3>Solutions for Balance</h3>
+        <ul>
+            <li><strong>Communication:</strong> Speak up clearly, no mind-reading</li>
+            <li><strong>Structure:</strong> Weekly family meetings</li>
+            <li><strong>Validation:</strong> Acknowledge struggles before requests</li>
+        </ul>
+    </div>
+    
+    <div id="strategies" class="section" style="display:none;">
+        <h2>💡 Quick Strategies</h2>
+        <h3>For Working Memory</h3>
+        <ul>
+            <li>Voice memos for immediate capture</li>
+            <li>Visual reminders in key locations</li>
+            <li>"Touch it once" rule for paperwork</li>
+        </ul>
+        
+        <h3>For Emotional Regulation</h3>
+        <ul>
+            <li>"Pause button" technique</li>
+            <li>Designated calm-down space</li>
+            <li>Body doubling for tough tasks</li>
+        </ul>
+        
+        <h3>For Planning & Organization</h3>
+        <ul>
+            <li>Time blocking instead of to-do lists</li>
+            <li>Weekly planning with your wife</li>
+            <li>"2-minute rule" - do it now if quick</li>
+        </ul>
+    </div>
+    
+    <div id="tracking" class="section" style="display:none;">
+        <h2>📈 Progress Tracking</h2>
+        <h3>Daily Wins Journal</h3>
+        <ul>
+            <li>Write 3 things you did well each day</li>
+            <li>Track challenges and how you handled them</li>
+        </ul>
+        
+        <h3>Weekly Check-ins</h3>
+        <ul>
+            <li>Rate your week 1-10 with your wife</li>
+            <li>Review the 5 principles progress</li>
+        </ul>
+        
+        <h3>Habit Tracker</h3>
+        <ul>
+            <li>Simple chart for key routines</li>
+            <li>Celebrate consistency over perfection</li>
+        </ul>
+    </div>
+    
+    <div id="crisis" class="section" style="display:none;">
+        <h2>🚨 Crisis Management</h2>
+        <div class="emergency">
+            <h3>Immediate De-escalation</h3>
+            <ul>
+                <li><strong>Recognize:</strong> "We're in crisis mode"</li>
+                <li><strong>Time-out:</strong> 20-30 minutes apart</li>
+                <li><strong>Regulate:</strong> Use calming strategies</li>
+                <li><strong>Reconvene:</strong> With structure and appreciation</li>
+            </ul>
+        </div>
+        
+        <h3>Emergency Contacts</h3>
+        <ul>
+            <li>Crisis Text Line: Text HOME to 741741</li>
+            <li>National Suicide Lifeline: 988</li>
+            <li>Your therapist: _________________</li>
+        </ul>
+    </div>
+    
+    <div id="resources" class="section" style="display:none;">
+        <h2>📚 Key Resources</h2>
+        <h3>Books for Couples</h3>
+        <ul>
+            <li>"The ADHD Effect on Marriage" - Melissa Orlov</li>
+            <li>"Is It You, Me, or Adult A.D.D.?" - Gina Pera</li>
+        </ul>
+        
+        <h3>Digital Tools</h3>
+        <ul>
+            <li>Shared calendar apps with reminders</li>
+            <li>Household management apps (Cozi, OurHome)</li>
+            <li>Budgeting apps for couples</li>
+        </ul>
+        
+        <h3>Professional Support</h3>
+        <ul>
+            <li>ADHD-informed couples therapists</li>
+            <li>ADHD coaches specializing in relationships</li>
+            <li>Support groups for both partners</li>
+        </ul>
+    </div>
+    
+    <div class="quick-access">
+        <div class="quick-btn" onclick="showSection('framework')">Framework</div>
+        <div class="quick-btn" onclick="showSection('mental-load')">Mental Load</div>
+        <div class="quick-btn" onclick="showSection('strategies')">Strategies</div>
+        <div class="quick-btn" onclick="showSection('tracking')">Tracking</div>
+        <div class="quick-btn" onclick="showSection('crisis')">Crisis Help</div>
+        <div class="quick-btn" onclick="showSection('resources')">Resources</div>
+    </div>
+    
+    <div class="footer">
+        <p>Personalized for you and your wife • Updated: March 18, 2026</p>
+        <p>Full website: http://localhost:8000</p>
+    </div>
+    
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Initialize with framework showing
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('framework');
+        });
+    </script>
+</body>
+</html>
